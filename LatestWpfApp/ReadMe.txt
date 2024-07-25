@@ -8,12 +8,21 @@
 	github
 		https://github.com/microsoft/XamlBehaviorsWpf
 			Downloadフォルダーにあるので動作を１つ１つ見る。これを作っていく
+				・Animation
+					・ControlStoryboardControl
+						button自体が動作するanimationを設定する
+					・FluidMoveBehavior
+						消した四角が上に行くanimationが動く
+					・MouseDragElementBehavior
+						ものをmouseでdragできる
+					・FluidMoveSetTagBehavior
+						ちょっとむずい。指定した要素が、指定した位置へ移動する
+					・TouchBehaviorControl
+						タッチパネル用っぽい。
 
 
 
-
-
-	以下実装したけどコメントアウトしておく
+	以下実装したけど消してやり直す
 		・Trigger
 			・ボタン押下処理
 				<i:Interaction.Triggers>

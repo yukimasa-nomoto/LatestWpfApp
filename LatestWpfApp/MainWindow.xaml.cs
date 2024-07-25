@@ -20,14 +20,22 @@ namespace LatestWpfApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        private AnimationPage animationPage;
         internal MainWindowViewModel ViewModel => (MainWindowViewModel)this.DataContext;
 
         public MainWindow()
         {
             InitializeComponent();
-
+            animationPage = new AnimationPage();
             this.DataContext = new MainWindowViewModel();
-
+            this.MainContent.Children.Add(animationPage);
         }
+
+        private void AnimationButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.MainContent.Children.Clear();
+            this.MainContent.Children.Add(this.animationPage);
+        }
+
     }
 }

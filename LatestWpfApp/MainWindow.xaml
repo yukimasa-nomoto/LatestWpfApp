@@ -6,24 +6,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LatestWpfApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="350" Width="525">
     <StackPanel>
-        <ComboBox ItemsSource="{Binding MyComboItemList}" SelectedIndex="{Binding MySelectedIndex}" Height="25">
-            <i:Interaction.Triggers>
-                <i:EventTrigger EventName="SelectionChanged">
-                    <i:CallMethodAction TargetObject="{Binding}"
-											MethodName="ComboChanged"/>
-                </i:EventTrigger>
-            </i:Interaction.Triggers>
-        </ComboBox>
+        <StackPanel Orientation="Horizontal">
+            <Button x:Name="AnimationButton" Click="AnimationButton_Click" Content="Animation" Background="Transparent" 
+                    BorderBrush="Transparent" Margin="0,0,5,0"/>
 
-        <Button Content="ボタン">
-            <i:Interaction.Triggers>
-                <i:EventTrigger EventName="Click">
-                    <i:CallMethodAction TargetObject="{Binding}"
-											MethodName="ButtonClick"/>
-                </i:EventTrigger>
-            </i:Interaction.Triggers>
-        </Button>
+
+        </StackPanel>
+        <Grid x:Name="MainContent" />
     </StackPanel>
 </Window>

@@ -58,9 +58,48 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AnimationPage.xaml.cs">
+      <DependentUpon>AnimationPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="BindableBase.cs" />
+    <Compile Include="ControlStoryboardControl.xaml.cs">
+      <DependentUpon>ControlStoryboardControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataStore\DataStore\DataStore.xaml.cs" />
+    <Compile Include="FluidMoveControl.xaml.cs">
+      <DependentUpon>FluidMoveControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FluidMoveSetTagControl.xaml.cs">
+      <DependentUpon>FluidMoveSetTagControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainWindowViewModel.cs" />
+    <Compile Include="MouseDragElementControl.xaml.cs">
+      <DependentUpon>MouseDragElementControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SampleData\SampleDataSource\SampleDataSource.xaml.cs" />
+    <Compile Include="TouchBehaviorControl.xaml.cs">
+      <DependentUpon>TouchBehaviorControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModelBase.cs" />
+    <Page Include="AnimationPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlStoryboardControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DataStore\DataStore\DataStore.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FluidMoveControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FluidMoveSetTagControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -73,6 +112,17 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MouseDragElementControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SampleData\SampleDataSource\SampleDataSource.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TouchBehaviorControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -92,10 +142,16 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="DataStore\DataStore\DataStore.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SampleData\SampleDataSource\SampleDataSource.xsd">
+      <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -104,5 +160,14 @@
   <ItemGroup>
     <Resource Include="ReadMe.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Cheer.mp3" />
+    <Resource Include="SampleData\SampleDataSource\SampleDataSource_Files\image01.png" />
+    <Resource Include="SampleData\SampleDataSource\SampleDataSource_Files\image02.png" />
+    <Resource Include="SampleData\SampleDataSource\SampleDataSource_Files\image03.png" />
+    <Resource Include="SampleData\SampleDataSource\SampleDataSource_Files\image04.png" />
+    <Resource Include="SampleData\SampleDataSource\SampleDataSource_Files\image05.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
