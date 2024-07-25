@@ -19,7 +19,9 @@
 						ちょっとむずい。指定した要素が、指定した位置へ移動する
 					・TouchBehaviorControl
 						タッチパネル用っぽい。
-
+				・Condition
+					・CallMethodControl	ViewModelを絡める。	
+				kokokara
 
 
 	以下実装したけど消してやり直す

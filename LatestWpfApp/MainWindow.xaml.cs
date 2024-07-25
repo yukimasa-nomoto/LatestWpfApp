@@ -21,12 +21,15 @@ namespace LatestWpfApp
     public partial class MainWindow : Window
     {
         private AnimationPage animationPage;
+        private ConditionPage conditionPage;
         internal MainWindowViewModel ViewModel => (MainWindowViewModel)this.DataContext;
 
         public MainWindow()
         {
             InitializeComponent();
             animationPage = new AnimationPage();
+            conditionPage = new ConditionPage();
+
             this.DataContext = new MainWindowViewModel();
             this.MainContent.Children.Add(animationPage);
         }
@@ -35,6 +38,12 @@ namespace LatestWpfApp
         {
             this.MainContent.Children.Clear();
             this.MainContent.Children.Add(this.animationPage);
+        }
+
+        private void ConditionalButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.MainContent.Children.Clear();
+            this.MainContent.Children.Add(this.conditionPage);
         }
 
     }
